@@ -30,7 +30,7 @@ public class CustomerController {
         modelAndView.addObject("customers", customers);
         return modelAndView;
     }
-    @GetMapping("/search")
+    @PostMapping("/search")
     public ModelAndView listCustomerSearch(@RequestParam("search") Optional<String> search,@PageableDefault(value = 2) Pageable pageable) {
        Page<Customer> customers;
 
